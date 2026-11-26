@@ -1,10 +1,10 @@
 package oop.concur;
 
-import java.util.*;
+import java.util.Random;
 
 public class ConcurSortTest {
 
-	static final int VECTOR_SIZE = 100000000;
+	static final int VECTOR_SIZE = 100_000_000;
 	
 	public static void main(String[] args) {
 	

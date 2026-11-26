@@ -1,15 +1,16 @@
 package oop.concur;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Random;
 
 public class SequentialSortTest {
 
-	static final int VECTOR_SIZE = 100000000;
+	static final int VECTOR_SIZE = 100_000_000;
 
 	public static void main(String[] args) {
 
 		log("Generating array...");
-		int[] v = genArray(100000000);
+		int[] v = genArray(VECTOR_SIZE);
 		
 		log("Array generated.");
 

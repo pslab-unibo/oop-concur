@@ -12,20 +12,16 @@ public class ChronoView implements ChronoCountListener {
 	
 	public void show() {
 		try {
-			SwingUtilities.invokeAndWait(new Runnable() {
-				public void run() {
-					frame.setVisible(true);
-				}
+			SwingUtilities.invokeAndWait(() -> {
+				frame.setVisible(true);
 			});
 		} catch (Exception ex) {}
 	}
 	
 	@Override
 	public void notifyChronoCountChanged(int newValue) {
-		SwingUtilities.invokeLater(new Runnable() {
-			public void run() {
-				frame.updateCount(newValue);
-			}
+		SwingUtilities.invokeLater(() -> {
+			frame.updateCount(newValue);
 		});
 	}
 

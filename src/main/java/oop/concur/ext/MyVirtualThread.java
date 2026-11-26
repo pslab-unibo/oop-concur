@@ -17,6 +17,7 @@ public class MyVirtualThread implements Runnable {
 	
 	public static Thread make(Counter counter) {
 		Thread t = Thread.ofVirtual().unstarted(new MyVirtualThread(counter));
+		//Thread t = new Thread(new MyVirtualThread(counter));
 		return t;
 	}
 }

@@ -17,8 +17,7 @@ public class ChronoController implements Controller {
 	@Override
 	public void notifyStarted() {
 		agent = new ChronoAgent(counter, view);
-		// agent.start();
-		agent.run();
+		agent.start();
 	}
 
 	@Override

@@ -12,19 +12,15 @@ public class ChronoView {
 
 	public void show() {
 		try {
-			SwingUtilities.invokeAndWait(new Runnable(){
-				public void run(){
-					frame.setVisible(true);
-				}
+			SwingUtilities.invokeAndWait(() -> {
+				frame.setVisible(true);
 			});
 		} catch (Exception ex) {}
 	}
 	
 	public void updateCount(int value) {
-		SwingUtilities.invokeLater(new Runnable() {
-			public void run() {
-				frame.updateCount(value);
-			}
+		SwingUtilities.invokeLater(() -> {
+			frame.updateCount(value);
 		});
 	}
 
